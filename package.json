@@ -1,0 +1,28 @@
+{
+  "name": "list-open-pulls",
+  "version": "1.0.0",
+  "description": "List open pull requests via GHA",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkisk/list-open-pulls.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkisk/list-open-pulls/issues"
+  },
+  "homepage": "https://github.com/jkisk/list-open-pulls#readme",
+  "dependencies": {
+    "@actions/core": "latest",
+    "@actions/github": "latest"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "latest"
+  }
+}

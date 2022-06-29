@@ -1,0 +1,21 @@
+name: 'List Open PRs'
+description: 'List open pull requests for current repository'
+inputs:
+  token:  # id of input
+    description: 'gh token'
+    required: true
+    default: ''
+  owner:  # id of input
+    description: 'repo owner'
+    required: true
+    default: 'jkisk'
+  repo:  # id of input
+    description: 'repo'
+    required: true
+    default: 'list-open-pulls'
+outputs:
+  titles: # id of output
+    description: 'list of open pr titles'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
