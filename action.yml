@@ -1,20 +1,22 @@
-name: 'List Open PRs'
-description: 'List open pull requests for current repository'
+name: 'List Open Pull Request Titles'
+description: 'List open pull requests for a given repository'
+icon: git-pull-request
+color: green
 inputs:
-  token:  # id of input
+  token:
     description: 'gh token'
     required: true
     default: ''
-  owner:  # id of input
+  owner:
     description: 'repo owner'
     required: true
     default: 'jkisk'
-  repo:  # id of input
+  repo:
     description: 'repo'
     required: true
     default: 'list-open-pulls'
 outputs:
-  titles: # id of output
+  titles:
     description: 'list of open pr titles'
 runs:
   using: 'node16'
