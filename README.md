@@ -17,14 +17,18 @@ List open pull requests via GHA
 
 ## Outputs
 
-## `title`
+## `titles`
 
-Array of titles of open PRs for the specified repo.
+List of titles of open pull requests for the specified repository.
 
 ## Example usage
 ```
-uses: jkisk/list-open-pulls@v1
-with:
-  token: ${{ secrets.GITHUB_TOKEN }}
-  owner: jkisk
-  repo: list open pulls 
+- name: List pull request titles
+  id: list
+  uses: jkisk/list-open-pulls@v1
+  with:
+    token: ${{ secrets.GITHUB_TOKEN }}
+    owner: jkisk
+    repo: list open pulls
+- name: Check output
+  run: echo ${{ steps.list.outputs.titles }} 
